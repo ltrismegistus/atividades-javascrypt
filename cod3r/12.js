@@ -2,11 +2,18 @@
  12) Faça um algoritmo que calcule o fatorial de um número
  */
 
- let fatorial = function(num) {
-     while(num !== 1) {
-         num - 1
-         console.log(num)
-     }
+let fatorial = function (num) {
+    
+    let fatores = []
+    for (num;num > 0; --num){
+        fatores.push(num)
+        
+    }
+    console.log(`fatores = ${fatores}`)
+    const reducer = (accumulator, currentValue) => {
+        return accumulator * currentValue;
+    };
+    console.log(`resutado = ${fatores.reduce(reducer)}`)
+}
 
- }
- fatorial(5)
+fatorial(100)
